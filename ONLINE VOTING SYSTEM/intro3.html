@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="download.png">
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.container3 {
+    position: relative;
+    box-shadow: 20px 20px 10px black;
+}
+
+.scanner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scanner .fingerprint {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: url(fingerprint.png) no-repeat center center/cover;
+}
+
+.scanner .fingerprint::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(fingerPrint_02.png) no-repeat center center/cover;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        height: 0%;
+    }
+    50% {
+        height: 100%;
+    }
+}
+
+.scanner .fingerprint::after {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #3fefef;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 60px #3fefef);
+    animation: animate_line 4s ease-in-out infinite;
+}
+
+@keyframes animate_line {
+    0%, 100% {
+        top: 0%;
+    }
+    50% {
+        top: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="container3">
+        <center>
+        <h1><u>INFORMATION</u></h1>
+        </center>
+        <ul class="item1">
+            <li>NAME</li><li><input type="text" placeholder="enter the name"></li>
+        </ul>
+        <ul class="item2">
+            <li>EMAIL</li><li><input type="email" placeholder="enter the email address"></li>
+        </ul>
+        <ul class="item3">
+            <li>MOBILE NUMBER</li><li><input type="number" placeholder="enter the number"></li>
+        </ul>
+        <ul class="item4">
+            <li>ADDRESS</li><li><input type="text" placeholder="enter the address"></li>
+        </ul>
+        <ul class="item5">
+            <li>GENDER</li>
+            <li><input type="radio" name="gender" value="female"> FEMALE</li>
+            <li><input type="radio" name="gender" value="male"> MALE</li>
+            <li><input type="radio" name="gender" value="prefer_not_to_say"> TRANSGENDER</li>
+        </ul>
+        <ul class="item6">
+            <li>AADHAR NUMBER</li><li><input type="number" placeholder="enter the aadhar number"></li>
+        </ul>
+        <ul class="item7">
+            <li>PAN CARD</li><li><input type="text" placeholder="enter the pancard"></li>
+        </ul>
+        <center>
+        <h1><u>PARENTS INFORMATION</u></h1></center>
+        <ul class="item8">
+            <li>FATHER'S NAME</li><li><input type="text" placeholder="enter the father's name"></li>
+        </ul>
+        <ul class="item9">
+            <li>FATHER'S OCCUPATION</li><li><input type="text" placeholder="enter the father's occupation"></li>
+        </ul>
+        <ul class="item10">
+            <li>MOBILE NUMBER</li><li><input type="number" placeholder="enter the father's mobile number"></li>
+        </ul>
+        <ul class="item11">
+            <li>MOTHER'S NAME</li><li><input type="text" placeholder="enter the mother's name"></li>
+        </ul>
+        <ul class="item12">
+            <li>MOTHER'S OCCUPATION</li><li><input type="text" placeholder="enter the mother's occupation"></li>
+        </ul>
+        <ul class="item13">
+            <li>MOBILE NUMBER</li><li><input type="text" placeholder="enter the mothre's mobile number"></li>
+        </ul>
+        <center>
+            <h1><u>PROOFS</u></h1>
+        </center>
+         <ul class="item14">
+            <li>SIGNATURE</li><li><input type="file" ></li>
+        </ul>
+        <ul class="item15">
+            <li>FINGER PRINT</li>
+            <div class="scanner">
+                <div class="fingerprint"></div>
+            </div>
+        </ul>
+        <ul class="item16">
+            <li>PASSWORD</li><li><input type="password" placeholder="enter the password"></li>
+        </ul>
+        <center>
+            <button class="button2"><a href="intro1.html" target="_blank_" >SUBMIT</a></button>
+        </center>
+        
+
+    </div>
+</body>
+</html>
